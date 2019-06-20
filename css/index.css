@@ -1,0 +1,78 @@
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body,html{
+  height: 100%;
+}
+.wrapper{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text{
+  width: 280px;
+  font-size:60px;
+  text-align: center;
+  line-height: 30px;
+  border-radius:10px;
+  height: 130px;
+  color: blue;
+  font-weight: bold;
+}
+.goon,.newgame{
+  width: 180px;
+  text-align: center;
+  line-height: 30px;
+  margin: 15px;
+  border-radius:10px;
+  height: 30px;
+  background-color: blue;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.toast{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius:15px;
+  background-color: burlywood;
+  top: 50%;
+  left: 50%;
+  margin-top:-100px;
+  margin-left: -150px; 
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  -ms-border-radius:15px;
+  -o-border-radius:15px;
+  display: none;
+}
+.toast .con{
+  height: 20px;
+  color: #fff;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 20px;
+}
+.toast p{
+  height: 20px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 20px;
+  width: 70%;
+  background-color: pink;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  cursor: pointer;
+}
