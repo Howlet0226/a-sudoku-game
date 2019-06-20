@@ -17,14 +17,27 @@ let s = 0
 let hs = 0
 let final
 $('.game-text .schema').text(`${localStorage.schema}`)
+let file = 0
+if(localStorage.schema == '难度1'){
+  file = 1
+}else if(localStorage.schema == '难度2'){
+  file = 2
+}else if(localStorage.schema == '难度3'){
+  file = 3
+}
 $.ajax({
   type: "GET",
   // localStorage.schema就是难度，与文件名必须一致，这是从index页面传过来的
-  url: `http://127.0.0.1:8080/content/${localStorage.schema}.json`,
+  url: `http://127.0.0.1:8080/content/${file}/${file}.json`,
   dataType: 'json',
   success: function (res) {
-    final = res.final
-    createGame(res.pre)
+    res = res.con
+    console.log(res.length);
+    let num = Math.floor(Math.random() * res.length)
+    console.log(num);
+    let result = res[num]
+    final = result.final
+    createGame(result.pre)
     handleClick()
     recordTime()
   }
